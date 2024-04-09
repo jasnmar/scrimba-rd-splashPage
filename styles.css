@@ -2,15 +2,46 @@ html, body {
     font-family: 'Source Sans Pro', sans-serif;
     color: #404040;
     margin: 0px;
+    
 }
 
 /* =================
     Typography 
    ================= */
 
+   /* 
+  Challenge: Set the initial styles for text
+    - Set the h1 to a relative font-size value equal to 40px
+    - Apply a text shadow to the h1 using the color value #816fca
+*/
 h1 {
-    margin-top:0px;
     font-weight: 400;
+    font-size: 2.5rem;
+    text-shadow: 0px 2px 2px #816fca;
+}
+/* 
+  Challenge: Set the initial styles for text
+    - Set the h2 to a relative font-size value equal to 36px
+    - Give the h2 a top and bottom margin value in em equal to 6px
+*/
+
+h2 {
+    font-size: 2.25rem;
+    margin: 0 .167em;
+}
+
+/* 
+  Challenge: Set the initial styles for text
+    - Set the paragraph to a relative font-size value equal to 18px
+    - Set the p line-height to 1.35 times its font-size value
+    - Give .subheading a bottom margin in em equal to half its font-size value
+*/
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+}
+.beta-text, .subheading {
+    text-transform: uppercase;
 }
 
 .beta-text { 
@@ -20,8 +51,12 @@ h1 {
 .subheading {
     color: #575757;
     font-weight: 900;
-   
+    margin-bottom: .5em;
+    
 }
+
+
+
 
 /* =================
     Intro
@@ -71,3 +106,12 @@ h1 {
 /* =================
     Media queries 
    ================= */
+
+@media (min-width: 576px) {
+    body {
+        display: flex;
+    }
+    .intro, .main-content { 
+        width: 50%;
+    }
+}
