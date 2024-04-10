@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, body {
     font-family: 'Source Sans Pro', sans-serif;
     color: #404040;
@@ -40,7 +44,9 @@ p {
     font-size: 1.125rem;
     line-height: 1.35;
 }
-.beta-text, .subheading {
+.beta-text,
+.top-text,
+.subheading {
     text-transform: uppercase;
 }
 
@@ -52,6 +58,15 @@ p {
     color: #575757;
     font-weight: 900;
     margin-bottom: .5em;
+}
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    order: -2;
+    margin: 0px auto;
 }
 
 .fine-print {
@@ -79,10 +94,10 @@ p {
     color: #fff;
     background-color: #9480e4;
     min-height: 250px;
-    justify-content: center;
+    justify-content: space-between;
     background-image: url("./images/intro-bg.png");
     background-size: cover;
-    
+    padding-bottom: 1.5em;
 }
 
 /* ====================
@@ -101,7 +116,10 @@ p {
     flex-direction: column;
     align-items: center;
     padding: 2.5em 2em;
+}
 
+.main-content, p {
+    max-width: 450px;
 }
 
 .img-main {
@@ -122,18 +140,66 @@ p {
     - Apply a padding in em that's equal to half the input's
       font-size to all 4 sides
 */
+
+/* 
+  Challenge: Style the form inputs
+    - Give the inputs a solid 2px border using the value #d1d5db
+    - Round the corners of the input fields by 5px
+    - On focus, update an input’s border color to #8a71ec
+      and background color to #e6e8ec
+*/
+/* 
+  Challenge: Style the submit button
+    - The button should have the same font-family, width
+      and border-radius of the input elements
+    - Use the .btn selector to set the custom button styles;
+      use the slide as a guide
+    - Button colors:
+      - Background: #8a71ec
+      - Background on hover: #b7a7f6
+*/
+
 form {
     width: 90%;
     margin-right: 40px;
 }
+input, .btn {
+    font-family: inherit;
+    width: 100%;
+    border-radius: 5px;
+}
+
 input {
     display: block;
     padding: 6px 12px;
     margin-bottom: .8em;
-    width: 100%;
-    margin-left: 0
+    margin-left: 0;
+    border: 2px solid #d1d5db;
+
 }
-   
+
+input:focus {
+    outline: none;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+}
+.btn {
+    padding: .8em;
+    border:0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #8a71ec;
+    color: white;
+    margin-top: 1em;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #b7a7f6;
+}
 
 /* =================
     Media queries 
