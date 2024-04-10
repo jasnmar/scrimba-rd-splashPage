@@ -70,7 +70,7 @@ p {
     background-color: #9480e4;
     min-height: 250px;
     justify-content: center;
-
+    
 }
 
 /* ====================
@@ -107,6 +107,16 @@ p {
     Media queries 
    ================= */
 
+
+
+   /* 
+  Challenge: Adjust text for wider screens
+    - In the media query, increase the h1 font-size to
+      a rem value equal to 52px
+    - Increase the h2 font-size to a rem value equal to 42px
+    - Increase the font-size of .beta-text to a 
+      rem value equal to 20px
+*/
 @media (min-width: 576px) {
     body {
         display: flex;
@@ -114,4 +124,21 @@ p {
     .intro, .main-content { 
         width: 50%;
     }
+    .main-content {
+        justify-content: center;
+        padding-top:0px;
+    }
+    .intro {
+        height: 100vh
+    }
+    h1 {
+        font-size: 3.25rem;
+    }
+    h2 {
+        font-size: 2.625rem;
+    }
+    .beta-text {
+        font-size: 1.25rem;
+    }
+
 }
